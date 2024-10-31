@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav>
+      <div class="logo">MD IRFAN AHMED</div>
+      <div class="menu-icon" onclick="toggleMenu()">&#9776;</div> <!-- Hamburger icon -->
+      <ul id="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="page2.html">Direct Massage</a></li>
+       
+      </ul>
+    </nav>
+  </header>
+  
+
+  <!-- Main Content Section -->
+  <main>
+    <section class="card">
+      <div class="card-image">
+        <img src="2.jpg" alt="Placeholder Image">
+      </div>
+      <div class="card-content">
+        <h2>My Name is MD Irfan Ahmed</h2>
+        <p>I am a proffesional web developer and a Graphics Designer and Video Editor and SEO Specalist.</p>
+        <a href="#" class="see-more">See More</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- JavaScript to Toggle Menu -->
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("active");
+    }
+  </script>
+ 
+
+ 
+
+
+
+
+ <button class="play-button" onclick="togglePlay()">🎵 Play Music</button>
+
+        <!-- Audio Element -->
+        <audio id="audioPlayer">
+            <source src="Anuv Jain - JO TUM MERE HO (Lyrics).mp3" type="audio/mpeg"> <!-- Replace with your audio file -->
+            Your browser does not support the audio element.
+        </audio>
+
+
+        <script src="main.js"></script>
+</body>
+</html>

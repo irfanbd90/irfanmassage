@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  body {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .chat-container {
+    width: 100%;
+    max-width: 500px;
+    background: #f3f4f6;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+  }
+  
+  .chat-box {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transition: all 0.3s ease;
+  }
+  
+  .message {
+    padding: 10px 15px;
+    border-radius: 10px;
+    max-width: 70%;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  .user-message {
+    align-self: flex-end;
+    background-color: #1565c0;
+    color: #fff;
+    animation: slideInRight 0.4s ease;
+  }
+  
+  .auto-reply {
+    align-self: flex-start;
+    background-color: #e0e0e0;
+    color: #424242;
+    animation: slideInLeft 0.4s ease;
+  }
+  
+  .recommended-questions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+   
+  }
+  
+  .recommended-questions button {
+    background-color: #3949ab;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  .recommended-questions button:hover {
+    background-color: #5c6bc0;
+    transform: translateY(-2px);
+  }
+  
+  .input-area {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: #fff;
+  }
+  
+  #messageInput {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    margin-right: 5px;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  #messageInput::placeholder {
+    animation: typing 3s steps(20, end) infinite;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  button {
+    background-color: #3949ab;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #5c6bc0;
+  }
+  
+  .back-button {
+    background-color: #3949ab;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    align-self: flex-start;
+  }
+  
+  .back-button:hover {
+    background-color: #5c6bc0;
+    transform: scale(1.05);
+  }
+  
+  .loading {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes slideInRight {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes typing {
+    0% { content: "Type your message here..."; }
+    100% { content: "Type your message here..."; }
+  }
+  

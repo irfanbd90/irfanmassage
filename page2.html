@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Messaging Page</title>
+  <link rel="stylesheet" href="page2.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <!-- Back Button -->
+    <button class="back-button" onclick="goBack()">⬅️ Back</button>
+
+    <div class="chat-box" id="chatBox"></div>
+
+    <!-- Recommended Questions -->
+    <div class="recommended-questions">
+      <button onclick="sendRecommendedMessage(1)">আপনি কি আপনার ভিডিওর থাম্বেল তৈরি করতে চাচ্ছেন? 😊</button>
+      <button onclick="sendRecommendedMessage(2)">আপনি কি আপনার ভিডিও এডিট করতে চাচ্ছেন? 🎬</button>
+      <button onclick="sendRecommendedMessage(3)">আপনি কি সরাসরি আমাদের সাথে কথা বলতে চাচ্ছেন? 📞</button>
+      <button onclick="sendRecommendedMessage(4)">আপনি কি আপনার ইউটিউব চ্যানেলের অবস্থা জানতে চাচ্ছেন? 📈</button>
+    </div>
+
+    <!-- Input Area for Messages -->
+    <div class="input-area">
+      <input type="text" id="messageInput" placeholder="Type your message here..." onkeypress="sendMessageOnEnter(event)">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
